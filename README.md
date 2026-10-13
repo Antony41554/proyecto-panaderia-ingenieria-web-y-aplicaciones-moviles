@@ -8,6 +8,27 @@ Sistema de e-commerce desarrollado con Spring Boot 3.4.2, siguiendo principios D
 - Maven 3.6+
 - MySQL 8.0 o PostgreSQL 13+
 
+## Proceso de ejecucion
+
+1. Clonar el repositorio, se recomienda a travez de github desktop por su facilidad de uso (Se puede obtener en https://github.com/apps/desktop)
+
+2. Crear Base de datos y añadir datos de prueba ejecutando el archivo **"panaderia-hexagonal-architecture-java-spring-boot\AGREGAR BASE DE DATOS\cargar_BD_mas_datos.bat"**
+
+3. Abrir el proyecto en Visual Studio Code (Se puede obtener en https://code.visualstudio.com)
+
+4. Ejecutar el comando **".\mvnw.cmd clean compile"** en la terminal en Visual Studio Code para descargar las dependencias necesarias
+
+5. Ejecutar el comando **".\mvnw.cmd spring-boot:run"** para iniciar la aplicacion
+
+**Cuentas de usuario a probar:**
+
+| Rol     | Correo                    | Contraseña    |
+| ------- | ------------------------- | ------------- |
+| ADMIN   | admin@panaderiabarrios.pe | `Admin123*`   |
+| CLIENTE | ana.mamani@gmail.com      | `Cliente123*` |
+| CLIENTE | luis.condori@gmail.com    | `Cliente123*` |
+| CLIENTE | carla.flores@gmail.com    | `Cliente123*` |
+
 ## Configuración
 
 1. Crear base de datos:
@@ -64,27 +85,27 @@ Este registro incluye **19 ítems de configuración** distribuidos en todas las 
 
 ### Tabla Resumida de ICs
 
-| ID-IC | Categoría | Nombre | Responsable | Rol | Criticidad |
-|---|---|---|---|---|---|
-| IC-01 | Código | pom.xml | Guillermo Mogrovejo | Backend Lead | Alta |
-| IC-02 | Código | EcommerceApplication | Kevin Calle | Backend Developer | Alta |
-| IC-03 | Código | SecurityConfig | Noemi Chura | Security Engineer | Alta |
-| IC-04 | Código | LoginController | Alberto Barrios | Backend Developer | Media |
-| IC-05 | Código | ProductoAdminController | Alberto Barrios | Backend Developer | Media |
-| IC-06 | Infraestructura | mvnw | Guillermo Mogrovejo | DevOps | Alta |
-| IC-07 | Infraestructura | mvnw.cmd | Kevin Calle | DevOps | Alta |
-| IC-08 | Infraestructura | maven-wrapper.properties | Guillermo Mogrovejo | DevOps | Alta |
-| IC-09 | Infraestructura | panaderiaDB.sql | Alberto Barrios | Data Engineer | Media |
-| IC-10 | Configuración | application.properties | Katherin Quispe | DevOps | Alta |
-| IC-11 | Configuración | application-dev-mysql.properties | Guillermo Mogrovejo | DevOps | Alta |
-| IC-12 | Configuración | schema.sql | Alberto Barrios | Data Engineer | Media |
-| IC-13 | Documentación | README.md | Lizeth Hancco | Architect | Baja |
-| IC-14 | Documentación | TABLA_VINCULACION_ARQUITECTONICA.md | Leticia Calderón | Architect | Baja |
-| IC-15 | Configuración | data.sql | Katherin Quispe | Data Engineer | Media |
-| IC-16 | Código | ProductoService | Kevin Calle | Backend Developer | Media |
-| IC-17 | Código | ClienteService | Noemi Chura | Backend Developer | Media |
-| IC-18 | Código | AdminController | Leticia Calderón | Backend Developer | Media |
-| IC-19 | Infraestructura | carrito.js | Katherin Quispe | Frontend Developer | Baja |
+| ID-IC | Categoría       | Nombre                              | Responsable         | Rol                | Criticidad |
+| ----- | --------------- | ----------------------------------- | ------------------- | ------------------ | ---------- |
+| IC-01 | Código          | pom.xml                             | Guillermo Mogrovejo | Backend Lead       | Alta       |
+| IC-02 | Código          | EcommerceApplication                | Kevin Calle         | Backend Developer  | Alta       |
+| IC-03 | Código          | SecurityConfig                      | Noemi Chura         | Security Engineer  | Alta       |
+| IC-04 | Código          | LoginController                     | Alberto Barrios     | Backend Developer  | Media      |
+| IC-05 | Código          | ProductoAdminController             | Alberto Barrios     | Backend Developer  | Media      |
+| IC-06 | Infraestructura | mvnw                                | Guillermo Mogrovejo | DevOps             | Alta       |
+| IC-07 | Infraestructura | mvnw.cmd                            | Kevin Calle         | DevOps             | Alta       |
+| IC-08 | Infraestructura | maven-wrapper.properties            | Guillermo Mogrovejo | DevOps             | Alta       |
+| IC-09 | Infraestructura | panaderiaDB.sql                     | Alberto Barrios     | Data Engineer      | Media      |
+| IC-10 | Configuración   | application.properties              | Katherin Quispe     | DevOps             | Alta       |
+| IC-11 | Configuración   | application-dev-mysql.properties    | Guillermo Mogrovejo | DevOps             | Alta       |
+| IC-12 | Configuración   | schema.sql                          | Alberto Barrios     | Data Engineer      | Media      |
+| IC-13 | Documentación   | README.md                           | Lizeth Hancco       | Architect          | Baja       |
+| IC-14 | Documentación   | TABLA_VINCULACION_ARQUITECTONICA.md | Leticia Calderón    | Architect          | Baja       |
+| IC-15 | Configuración   | data.sql                            | Katherin Quispe     | Data Engineer      | Media      |
+| IC-16 | Código          | ProductoService                     | Kevin Calle         | Backend Developer  | Media      |
+| IC-17 | Código          | ClienteService                      | Noemi Chura         | Backend Developer  | Media      |
+| IC-18 | Código          | AdminController                     | Leticia Calderón    | Backend Developer  | Media      |
+| IC-19 | Infraestructura | carrito.js                          | Katherin Quispe     | Frontend Developer | Baja       |
 
 ### Criterios de Criticidad Aplicados
 
@@ -104,13 +125,13 @@ Este registro incluye **19 ítems de configuración** distribuidos en todas las 
 
 ## 📚 Documentación de Apoyo
 
-| Documento | Propósito |
-|---|---|
-| [**SECURITY.md**](SECURITY.md) | Recomendaciones de seguridad y checklist pre-producción |
-| [**SECURITY-SUMMARY.md**](SECURITY-SUMMARY.md) | Resumen ejecutivo de cambios de seguridad |
+| Documento                                                  | Propósito                                                |
+| ---------------------------------------------------------- | -------------------------------------------------------- |
+| [**SECURITY.md**](SECURITY.md)                             | Recomendaciones de seguridad y checklist pre-producción  |
+| [**SECURITY-SUMMARY.md**](SECURITY-SUMMARY.md)             | Resumen ejecutivo de cambios de seguridad                |
 | [**STRUCTURE-OPTIMIZATION.md**](STRUCTURE-OPTIMIZATION.md) | Guía de estructura optimizada y limpieza del repositorio |
-| [**SCM-DEUDA.md**](SCM-DEUDA.md) | Deudas técnicas con fechas objetivo |
-| [**CHANGELOG-SECURITY.md**](CHANGELOG-SECURITY.md) | Histórico detallado de cambios de seguridad |
+| [**SCM-DEUDA.md**](SCM-DEUDA.md)                           | Deudas técnicas con fechas objetivo                      |
+| [**CHANGELOG-SECURITY.md**](CHANGELOG-SECURITY.md)         | Histórico detallado de cambios de seguridad              |
 
 ---
 
