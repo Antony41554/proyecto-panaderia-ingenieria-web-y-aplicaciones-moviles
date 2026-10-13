@@ -8,19 +8,77 @@ Sistema de e-commerce desarrollado con Spring Boot 3.4.2, siguiendo principios D
 - Maven 3.6+
 - MySQL 8.0 o PostgreSQL 13+
 
-## Proceso de ejecucion
+## Proceso de ejecución
 
-1. Clonar el repositorio, se recomienda a travez de github desktop por su facilidad de uso (Se puede obtener en https://github.com/apps/desktop)
+### 1. Clonar el repositorio
 
-2. Crear Base de datos y añadir datos de prueba ejecutando el archivo **"panaderia-hexagonal-architecture-java-spring-boot\AGREGAR BASE DE DATOS\cargar_BD_mas_datos.bat"**
+Clonar este repositorio en la computadora.
 
-3. Abrir el proyecto en Visual Studio Code (Se puede obtener en https://code.visualstudio.com)
+Se recomienda utilizar **GitHub Desktop** por su facilidad de uso:
 
-4. Ejecutar el comando **".\mvnw.cmd clean compile"** en la terminal en Visual Studio Code para descargar las dependencias necesarias
+https://github.com/apps/desktop
 
-5. Ejecutar el comando **".\mvnw.cmd spring-boot:run"** para iniciar la aplicacion
+### 2. Instalar Java 21
 
-**Cuentas de usuario a probar:**
+Verificar si Java está instalado ejecutando:
+
+```bash
+java -version
+```
+
+En caso de no tener Java instalado, instalar **OpenJDK 21** desde CMD o PowerShell con el siguiente comando:
+
+```bash
+winget install Microsoft.OpenJDK.21
+```
+
+Después de la instalación, cerrar y volver a abrir la terminal y verificar nuevamente:
+
+```bash
+java -version
+```
+
+### 3. Crear la base de datos y cargar los datos de prueba
+
+Ejecutar el siguiente archivo:
+
+```text
+panaderia-hexagonal-architecture-java-spring-boot\AGREGAR BASE DE DATOS\cargar_BD_mas_datos.bat
+```
+
+Este archivo se encargará de crear la base de datos y cargar los datos necesarios para realizar pruebas.
+
+### 4. Abrir el proyecto en Visual Studio Code
+
+Abrir la carpeta del proyecto utilizando **Visual Studio Code**.
+
+Puede descargarse desde:
+
+https://code.visualstudio.com
+
+### 5. Compilar el proyecto y descargar las dependencias
+
+Abrir una terminal dentro de Visual Studio Code, ubicada en la carpeta raíz del proyecto, y ejecutar:
+
+```bash
+.\mvnw.cmd clean compile
+```
+
+Este comando utilizará **Maven Wrapper** para descargar las dependencias necesarias y compilar el proyecto.
+
+> No es necesario instalar Maven manualmente, ya que el proyecto incluye Maven Wrapper.
+
+### 6. Iniciar la aplicación
+
+Ejecutar:
+
+```bash
+.\mvnw.cmd spring-boot:run
+```
+
+Una vez iniciado correctamente Spring Boot, la aplicación estará lista para utilizarse.
+
+## Cuentas de usuario para pruebas
 
 | Rol     | Correo                    | Contraseña    |
 | ------- | ------------------------- | ------------- |
@@ -28,31 +86,6 @@ Sistema de e-commerce desarrollado con Spring Boot 3.4.2, siguiendo principios D
 | CLIENTE | ana.mamani@gmail.com      | `Cliente123*` |
 | CLIENTE | luis.condori@gmail.com    | `Cliente123*` |
 | CLIENTE | carla.flores@gmail.com    | `Cliente123*` |
-
-## Configuración
-
-1. Crear base de datos:
-   - MySQL: `CREATE DATABASE PanaderiaBarriosDB;`
-   - PostgreSQL: `CREATE DATABASE ecommerce_db;`
-
-2. Configurar credenciales en `application-dev-mysql.properties` o `application-dev-postgresql.properties`
-
-3. Ejecutar:
-   ```bash
-   mvn spring-boot:run
-   ```
-
-## Acceso
-
-- Admin: admin@example.com / admin123
-- Cliente: cliente@example.com / 123456
-
-## Perfiles
-
-- `dev-mysql`: Para MySQL
-- `dev-postgresql`: Para PostgreSQL
-
-Cambiar en `application.properties`: `spring.profiles.active=dev-postgresql`
 
 ## Pruebas
 
