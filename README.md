@@ -1,4 +1,4 @@
-# E-commerce Sistema
+# Proyecto panaderia - Ingeniería Web Y Aplicaciones Móviles
 
 Sistema de e-commerce desarrollado con Spring Boot 3.4.2, siguiendo principios DDD y Arquitectura Hexagonal.
 
